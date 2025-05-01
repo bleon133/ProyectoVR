@@ -44,12 +44,15 @@ public class GazeManager : MonoBehaviour
             AddValue(timeProggres);
         }
     }
+
     public void SetUpGaze(float timeForSelection) 
     {
         this.timeForSelection = timeForSelection;
     }
     public void StartGazeSelection()
     {
+        if (runTimer) return; // Evita reiniciar si ya está corriendo
+
         gazeBarCanvas.SetActive(true);
         runTimer = true;
         timeProggres = 0;
