@@ -35,9 +35,19 @@ public class TeleportPoint : MonoBehaviour
     private void ExecuteTeleportation()
     {
         GameObject player = TeleportManager.Instance.Player;
-        player.transform.position = transform.position;
-        Camera camera = player.GetComponentInChildren<Camera>();
-        float rotY = transform.rotation.eulerAngles.y - camera.transform.localEulerAngles.y;
-        player.transform.rotation = Quaternion.Euler(0, rotY, 0);
+
+        /* ???????? POSICIÓN ???????? */
+        Vector3 destino = CameraPointerManager.Instance.hitPoint;
+        destino.y = transform.position.y;      // iguala la altura del TP para evitar hundirse o flotar
+        player.transform.position = destino;
+
+        /* ???????? ROTACIÓN ???????? */
+        Vector3 dir = destino - transform.position;   // radial desde el centro
+        dir.y = 0f;
+        if (dir.sqrMagnitude > 0.001f)
+        {
+            player.transform.rotation = Quaternion.LookRotation(dir, Vector3.up);
+        }
     }
+
 }
