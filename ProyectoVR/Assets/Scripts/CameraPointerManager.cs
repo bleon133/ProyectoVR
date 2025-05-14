@@ -48,8 +48,6 @@ public class CameraPointerManager : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
             hitPoint = hit.point;
-
-            // Detectar cambio de objeto
             if (_gazedAtObject != hit.transform.gameObject)
             {
                 _gazedAtObject?.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
@@ -57,28 +55,21 @@ public class CameraPointerManager : MonoBehaviour
                 _gazedAtObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver);
                 GazeManager.Instance.StartGazeSelection();
             }
-
-            // Si es interactuable, mantener puntero y seguir temporizador
             if (hit.transform.CompareTag(interactableTag))
             {
                 PointerOnGaze(hit.point);
             }
             else
             {
-                // MANTENER el puntero visible incluso si no es interactuable
-                PointerOnGaze(hit.point);
-                // pero cancela temporizador si no es interactuable
-                GazeManager.Instance.CancelGazeSelection();
+                PointerOutGaze();
             }
         }
         else
         {
             _gazedAtObject?.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
             _gazedAtObject = null;
-            PointerOutGaze();
         }
 
-        // Trigger físico de Cardboard
         if (Google.XR.Cardboard.Api.IsTriggerPressed)
         {
             _gazedAtObject?.SendMessage("OnPointerClickXR", null, SendMessageOptions.DontRequireReceiver);
