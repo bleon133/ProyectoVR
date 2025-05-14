@@ -18,7 +18,6 @@ public class TeleportPoint : MonoBehaviour
     public UnityEvent OnTeleportExit;
     private Vector3 _targetDir = Vector3.forward;
     //----------------------------------------------------
-    private AudioSource audioSource;
     [SerializeField] private TeleportType teleportType;
     //----------------------------------------------------
 
@@ -60,6 +59,13 @@ public class TeleportPoint : MonoBehaviour
 
     public void OnPointerClickXR()
     {
+        //-------------------------------------------------------------
+        if (teleportType == TeleportType.Peligroso)
+        {
+            SoundManager.Instance.PlayPlayerFootCreak();
+            SoundManager.Instance.PlayEnemyFootsteps();
+        }
+        //-------------------------------------------------------------
         ExecuteTeleportation();
         OnTeleport?.Invoke();
         //---------------------------------------------------

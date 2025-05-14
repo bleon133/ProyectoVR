@@ -10,8 +10,8 @@ public class EnemyProb : MonoBehaviour
     [SerializeField] private Transform playerTransform;
 
     private float spawnProbability = 0f;
-    private float normalTeleportIncrease = 5f;
-    private float peligrosoTeleportIncrease = 15f;
+    [SerializeField] private float normalTeleportIncrease = 5f;
+    [SerializeField] private float peligrosoTeleportIncrease = 10f;
     private float maxProbability = 100f;
 
 
