@@ -3,12 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//------------------------------------Mike
+public enum TeleportType
+{
+    Normal,
+    Peligroso,
+    Seguro
+}
+//-------------------------------------
 public class TeleportPoint : MonoBehaviour
 {
     public UnityEvent OnTeleportEnter;
     public UnityEvent OnTeleport;
     public UnityEvent OnTeleportExit;
     private Vector3 _targetDir = Vector3.forward;
+    //----------------------------------------------------
+    private AudioSource audioSource;
+    [SerializeField] private TeleportType teleportType;
+    //----------------------------------------------------
 
     [Header("Arrow settings")]
     [SerializeField] private float arrowDistance = 0.35f;   // qué tan lejos del centro
@@ -50,6 +62,9 @@ public class TeleportPoint : MonoBehaviour
     {
         ExecuteTeleportation();
         OnTeleport?.Invoke();
+        //---------------------------------------------------
+        EnemyProb.Instance.RegisterTeleport(teleportType);
+        //---------------------------------------------------
         TeleportManager.Instance.DisableTeleportPoint(gameObject);
     }
 
