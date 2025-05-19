@@ -75,4 +75,18 @@ public class SceneTeleporter : MonoBehaviour
         foreach (GameObject root in scene.GetRootGameObjects())
             root.SetActive(active);
     }
+
+    // Debajo de SetSceneObjectsActive(...)
+#if UNITY_EDITOR || UNITY_STANDALONE || UNITY_ANDROID || UNITY_IOS
+    [ContextMenu("Test Teleport")]   // clic derecho en el inspector para probar
+#endif
+    public void TeleportViaUIButton()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+            StartCoroutine(TeleportRoutine(player));
+        else
+            Debug.LogError("No se encontró ningún objeto con tag 'Player'");
+    }
+
 }

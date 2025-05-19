@@ -8,9 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/CardboardGazeSelection.unity
     guid: 6e8f39f11e8517e49a0660ee785f577c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Piso1Demo.unity
     guid: c7df8f8e4f3956d43a43f51f86a4921e
+  - enabled: 1
+    path: Assets/Scenes/Piso1Mike.unity
+    guid: 389de2bbeef9d814c9f0f6f123f7e75d
+  - enabled: 1
+    path: Assets/Scenes/Piso12.unity
+    guid: 9398276ea48611347a4a10f0cc9af041
+  - enabled: 1
+    path: Assets/Scenes/Bootstrap.unity
+    guid: 6d35539c0e60e2346b4effd55a073965
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0f009c280ff1f7747ae540838b86c80f,
       type: 2}

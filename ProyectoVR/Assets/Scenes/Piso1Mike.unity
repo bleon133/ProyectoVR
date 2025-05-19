@@ -10108,6 +10108,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 858962140}
   m_Mesh: {fileID: 8907802132142744889, guid: 646e7dbb0589e514eae0b291e45cc276, type: 3}
+--- !u!1 &862495797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 862495799}
+  - component: {fileID: 862495798}
+  m_Layer: 0
+  m_Name: Teleporter_UI_Piso1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &862495798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862495797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67c6dec75d4e58429bd12a1c5b646b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetScene: Piso12
+  targetSpawnId: FromPiso2
+  keepSourceSceneActive: 1
+  fadeTime: 0.25
+--- !u!4 &862495799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862495797}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 568.5, y: 291, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &865004001
 GameObject:
   m_ObjectHideFlags: 0
@@ -15377,7 +15425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Subir
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18940,6 +18988,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1743064884793796160, guid: 681fe84e144903147a931ffdd33b79fb,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5833695002017265505, guid: 681fe84e144903147a931ffdd33b79fb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19762,7 +19815,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1640061441}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 862495798}
+        m_TargetAssemblyTypeName: SceneTeleporter, Assembly-CSharp
+        m_MethodName: TeleportViaUIButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1640061441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24406,3 +24471,4 @@ SceneRoots:
   - {fileID: 678345048}
   - {fileID: 904911437}
   - {fileID: 291015255}
+  - {fileID: 862495799}

@@ -1,13 +1,26 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
 public class FadeScreen : MonoBehaviour
 {
-    public static FadeScreen Instance;      // Singleton r�pido
+    public static FadeScreen Instance;      // Singleton rápido
     [SerializeField] private CanvasGroup cg; // CanvasGroup asignado desde el inspector
 
-    void Awake() => Instance = this;
+    void Awake()
+    {
+        // ① si ya existe otra instancia (escena repetida) la destruimos
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+
+        // ② evita que se destruya al cambiar de escena
+        DontDestroyOnLoad(gameObject);
+    }
 
     public IEnumerator FadeOut(float t)
     {
