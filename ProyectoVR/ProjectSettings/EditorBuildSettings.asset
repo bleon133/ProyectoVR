@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Piso1Mike.unity
     guid: 389de2bbeef9d814c9f0f6f123f7e75d
   - enabled: 1
-    path: Assets/Scenes/Piso12.unity
+    path: Assets/Scenes/Piso2.unity
     guid: 9398276ea48611347a4a10f0cc9af041
   - enabled: 1
     path: Assets/Scenes/Bootstrap.unity

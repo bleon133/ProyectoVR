@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -51,7 +51,7 @@ public class GazeManager : MonoBehaviour
     }
     public void StartGazeSelection()
     {
-        if (runTimer) return; // Evita reiniciar si ya est� corriendo
+        if (runTimer) return; // Evita reiniciar si ya está corriendo
 
         gazeBarCanvas.SetActive(true);
         runTimer = true;

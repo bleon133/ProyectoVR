@@ -4,21 +4,31 @@ using System.Collections;
 
 public class FadeScreen : MonoBehaviour
 {
-    public static FadeScreen Instance;      // Singleton rápido
-    [SerializeField] private CanvasGroup cg; // CanvasGroup asignado desde el inspector
+    public static FadeScreen Instance;
+    [SerializeField] private CanvasGroup cg;
 
     void Awake()
     {
-        // ① si ya existe otra instancia (escena repetida) la destruimos
+        // Singleton
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
-
         Instance = this;
 
-        // ② evita que se destruya al cambiar de escena
+        // Asegura que haya un CanvasGroup
+        if (cg == null)
+            cg = GetComponent<CanvasGroup>();
+
+        if (cg == null)
+        {
+            Debug.LogError("FadeScreen: no se encontró CanvasGroup");
+            enabled = false;       // evita más errores
+            return;
+        }
+
+        cg.alpha = 0;              // comienza transparente
         DontDestroyOnLoad(gameObject);
     }
 

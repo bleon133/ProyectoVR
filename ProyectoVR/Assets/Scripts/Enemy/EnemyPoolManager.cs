@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyPoolManager : MonoBehaviour
@@ -12,16 +12,29 @@ public class EnemyPoolManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);   // ← el manager vive entre escenas
 
         for (int i = 0; i < poolSize; i++)
         {
-            GameObject enemy = Instantiate(enemyPrefab);
-            enemy.SetActive(false);
-            enemyPool.Enqueue(enemy);
+            SpawnAndEnqueue();
         }
     }
+
+    private GameObject SpawnAndEnqueue()
+    {
+        GameObject enemy = Instantiate(enemyPrefab, transform); // opcional: parent = manager
+        DontDestroyOnLoad(enemy);                               // ← evita destrucción
+        enemy.SetActive(false);
+        enemyPool.Enqueue(enemy);
+        return enemy;
+    }
+
 
     public GameObject GetEnemyFromPool()
     {

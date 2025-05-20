@@ -10,6 +10,7 @@ public enum TeleportType
     Peligroso,
     Seguro
 }
+
 //-------------------------------------
 public class TeleportPoint : MonoBehaviour
 {
@@ -21,14 +22,19 @@ public class TeleportPoint : MonoBehaviour
     [SerializeField] private TeleportType teleportType;
     //----------------------------------------------------
 
+    // ► NUEVO: layer al que iremos tras usar este portal
+    [Tooltip("Layer (Piso) que quedará activo después del salto")]
+    public int destinationLayer;   // lo ves como desplegable en el Inspector
+
     [Header("Arrow settings")]
     [SerializeField] private float arrowDistance = 0.35f;   // qué tan lejos del centro
     [SerializeField] private float arrowHeight = 0.05f;   // altura sobre el suelo
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        transform.GetChild(0).gameObject.SetActive(false); //Desactivar la flecha
+        TeleportManager.Instance.RegisterTeleport(this);  // -> pool global
+        transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void OnPointerEnterXR()

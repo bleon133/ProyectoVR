@@ -1,35 +1,47 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraPointerManager : MonoBehaviour
 {
     public static CameraPointerManager Instance;
 
-    [SerializeField] private GameObject pointer;
+    [SerializeField] private GameObject pointer;           // ← se reasignará
     [SerializeField] private float maxDistancePointer = 4.5f;
-    [Range(0,1)]
+    [Range(0, 1)]
     [SerializeField] private float disPointerObject = 0.95f;
 
     private const float _maxDistance = 10;
-    private GameObject _gazedAtObject = null;
-
+    private GameObject _gazedAtObject;
     private readonly string interactableTag = "Interactable";
     private float scaleSize = 0.025f;
 
-    [HideInInspector]
-    public Vector3 hitPoint;
+    [HideInInspector] public Vector3 hitPoint;
 
+    // ────────────────────────────────────────────────
     private void Awake()
     {
-        if (Instance != null && Instance != this) 
+        if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            Destroy(gameObject);     // destruye el duplicado *completo*, no sólo el componente
+            return;
         }
-        else
-        {
-            Instance = this;
-        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);   // el manager vive entre escenas
+    }
+
+    private void OnEnable() => SceneManager.sceneLoaded += OnSceneLoaded;
+    private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
+
+    private void OnSceneLoaded(Scene s, LoadSceneMode m)
+    {
+        // 1) Busca de nuevo el pointer si ya no es válido
+        if (pointer == null || !pointer)          // el operador ! detecta “zombies”
+            pointer = GameObject.FindWithTag("Pointer"); // o búscalo por nombre
+
+        // 2) Limpia cualquier referencia a objetos destruidos
+        _gazedAtObject = null;
     }
 
     private void Start()
@@ -44,6 +56,9 @@ public class CameraPointerManager : MonoBehaviour
 
     public void Update()
     {
+        // Si el pointer no existe aún, espera a que la escena lo cree
+        if (pointer == null || !pointer) return;
+
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
         {
@@ -52,45 +67,45 @@ public class CameraPointerManager : MonoBehaviour
             // Detectar cambio de objeto
             if (_gazedAtObject != hit.transform.gameObject)
             {
-                _gazedAtObject?.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
+                if (_gazedAtObject)         // evita MissingReference
+                    _gazedAtObject.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
+
                 _gazedAtObject = hit.transform.gameObject;
-                _gazedAtObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver);
+
+                if (_gazedAtObject)         // por si el objeto se destruye entre frames
+                    _gazedAtObject.SendMessage("OnPointerEnterXR", null, SendMessageOptions.DontRequireReceiver);
+
                 GazeManager.Instance.StartGazeSelection();
             }
 
-            // Si es interactuable, mantener puntero y seguir temporizador
-            if (hit.transform.CompareTag(interactableTag))
-            {
-                PointerOnGaze(hit.point);
-            }
-            else
-            {
-                // MANTENER el puntero visible incluso si no es interactuable
-                PointerOnGaze(hit.point);
-                // pero cancela temporizador si no es interactuable
+            PointerOnGaze(hit.point);                   // siempre actualiza el puntero
+            if (!hit.transform.CompareTag(interactableTag))
                 GazeManager.Instance.CancelGazeSelection();
-            }
         }
         else
         {
-            _gazedAtObject?.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
+            if (_gazedAtObject)
+                _gazedAtObject.SendMessage("OnPointerExitXR", null, SendMessageOptions.DontRequireReceiver);
+
             _gazedAtObject = null;
             PointerOutGaze();
         }
 
-        // Trigger f�sico de Cardboard
-        if (Google.XR.Cardboard.Api.IsTriggerPressed)
-        {
-            _gazedAtObject?.SendMessage("OnPointerClickXR", null, SendMessageOptions.DontRequireReceiver);
-        }
+        // Trigger físico Cardboard
+        if (Google.XR.Cardboard.Api.IsTriggerPressed && _gazedAtObject)
+            _gazedAtObject.SendMessage("OnPointerClickXR", null, SendMessageOptions.DontRequireReceiver);
     }
+
 
     private void PointerOnGaze(Vector3 hitPoint)
     {
+        if (!pointer) return;                            // protección extra
         float scaleFactor = scaleSize * Vector3.Distance(transform.position, hitPoint);
         pointer.transform.localScale = Vector3.one * scaleFactor;
-        pointer.transform.parent.position = CalculatePointerPosition(transform.position, hitPoint, disPointerObject);
+        pointer.transform.parent.position =
+            CalculatePointerPosition(transform.position, hitPoint, disPointerObject);
     }
+
 
     private void PointerOutGaze()
     {
