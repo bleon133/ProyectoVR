@@ -128,5 +128,3 @@ Tú, un investigador escéptico obsesionado con desenmascarar lo paranormal, enc
   - Si deseas quedarte inmóvil, deja de girar la cabeza y silencia cualquier sonido externo (úsalo con audífonos).  
 
 ---
-
-## 📂 Estructura del Repositorio
