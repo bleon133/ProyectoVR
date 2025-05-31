@@ -1,136 +1,132 @@
-# 🎮 La Mansión de los Ecos VR 👻
+# 🎮 La Mansión de los Ecos VR 👻 (Cardboard Móvil)
 
-¡Bienvenido a **La Mansión de los Ecos**, una experiencia de terror psicológico en Realidad Virtual que desafía tus sentidos y tu cordura! 🔦🔊 Sumérgete en una atmósfera low poly cargada de simbolismo religioso donde cada susurro y cada sombra cuentan una historia oculta.  
+¡Bienvenido a **La Mansión de los Ecos**, una experiencia de terror psicológico en Realidad Virtual diseñada para jugarse directamente en tu celular con Google Cardboard! 🔦🔊 Sumérgete en una atmósfera low poly cargada de simbolismo religioso, donde cada susurro y cada sombra desvelan un oscuro secreto.  
 
 ---
 
 ## 📖 Resumen Narrativo
 
-En lo más recóndito de los bosques, se alza una mansión imponente y abandonada, cuyos muros guardan un oscuro secreto:
+En lo más recóndito de los bosques, se alza una mansión imponente y abandonada, cuyas paredes ocultan una tragedia imposible de olvidar:
 
-> Una familia acaudalada y devota vive feliz hasta que su único hijo cae enfermo sin cura posible.  
+> Una familia adinerada y devota vive feliz hasta que su único hijo enferma sin cura posible.  
 > Desesperados, descubren un libro prohibido que promete un milagro a cambio de un sacrificio.  
-> Tras entregar al hijo de una criada, su retoño se recupera… pero su inocencia muere para siempre.  
-> Poseído por una entidad ancestral, el niño aterroriza a sus padres y los elimina.  
-> Ahora, en la mansión quedan ecos de plegarias rotas, rituales inacabados y una presencia que se aferra al dolor.  
+> Al sacrificar al hijo de la criada, su propio hijo vuelve a la vida… pero ya no es el mismo.  
+> Poseído por una entidad ancestral, el niño se convierte en un reflejo macabro de su fe rota: ataca y mata a sus padres.  
+> La mansión queda abandonada, y hoy quienes se atreven a entrar ven sombras, escuchan pasos… y en el espejo del altar, el reflejo de un niño que jamás debió existir.  
 
-Tú, un investigador escéptico obsesionado con desvelar lo paranormal, encuentras archivos que mencionan la desaparición de esta familia y la palabra “**Faith**” tatuada en sus registros. Convencido de hallar una explicación lógica, te adentras en la mansión, sin saber que aquí la realidad se curva y la fe puede condenarte…  
+Tú, un investigador escéptico obsesionado con desenmascarar lo paranormal, encuentras archivos que mencionan la desaparición de esta familia y la palabra “**Faith**” como única pista. Convencido de hallar una explicación lógica, te adentras en la mansión… sin saber que aquí la realidad se quiebra y la fe puede ser tu perdición.  
 
 ---
 
 ## 🕹️ Jugabilidad y Mecánicas Clave
 
 1. ### Exploración Ambiental 🏚️  
-   - Recorrerás un entorno cerrado y cargado de simbolismo religioso: capillas en ruinas, pasillos que susurran plegarias y habitaciones que mutan con el tiempo.  
-   - Cada objeto (cartas, símbolos, grabaciones, restos de rituales) es una pieza del rompecabezas narrativo: interactúa para reconstruir la historia fragmentada de la familia.  
+   - Recorre cada rincón de la mansión en primera persona usando tu celular y Google Cardboard.  
+   - Examina objetos (cartas, símbolos religiosos, grabaciones antiguas, restos de rituales) para armar la historia fragmentada.  
+   - Las habitaciones cambian sutilmente con el tiempo: un pasillo que antes estaba vacío puede aparecer lleno de símbolos religiosos la próxima vez que entres.  
 
 2. ### Narrativa Fragmentada 📜  
-   - La trama no se revela de forma lineal: encontrarás **pistas dispersas** que, al unirse, desvelan el horror detrás del pacto.  
-   - Objetos simbólicos (rosarios, páginas manchadas de sangre, evangelios antiguos) funcionan como “mecanismos” narrativos: al examinarlos, desbloqueas flashbacks en primera persona.  
+   - La trama no sigue un solo camino: cada objeto interactivo desbloquea un fragmento de la historia.  
+   - Pistas clave (rosarios, páginas manchadas de sangre, grabadoras analógicas) generan flashbacks en tu mente, revelando la desesperación de los padres y el pacto oscuro.  
 
 3. ### Diseño Sonoro como Pilar Central 🎧  
-   - El monstruo principal (el niño poseído) se manifiesta principalmente mediante **el sonido**: pisadas lejanas, risas infantiles distorsionadas, susurros que emergen del silencio.  
-   - Un sistema de audio espacial en VR te hará sentir cada crujido en el suelo, cada eco en los muros y cada latido en tu pecho.  
+   - El niño poseído se manifiesta principalmente a través del sonido: pisadas tenues, risas distorsionadas, susurros que emergen de la nada.  
+   - Audio espacial en Cardboard: cada crujido o susurro provendrá de direcciones específicas, ¡prepárate para girar la cabeza!  
 
 4. ### Mecánica de Sigilo Basada en Ruido 🤫  
-   - La criatura reacciona a cualquier ruido que produzcas: crujir una puerta, derribar un objeto o pisar un suelo inestable puede alertarla de tu presencia.  
-   - Debes planear tus movimientos, aprovechar el silencio y esconderte en las sombras para evitar ser descubierto.  
+   - Cualquier sonido que produces (pasos en el suelo, golpear objetos metálicos, agitar algo) alertará al ente.  
+   - Ocúltate en esquinas oscuras o detrás de muebles cuando escuches risas infantiles retorcidas; la criatura dejará de buscar si no detecta movimiento ni eco.  
 
 5. ### Estilo Artístico Low Poly 📐  
-   - Un diseño intencionalmente minimalista que favorece el rendimiento en VR sin sacrificar la inmersión.  
-   - Colores desaturados, luces dramáticas y abundante simbolismo religioso (cruces, vitrales rotos, esculturas) refuerzan la atmósfera de inquietud.  
+   - Modelos simples pero expresivos: baja carga gráfica para garantizar rendimiento fluido en tu Redmi con Cardboard.  
+   - Colores desaturados y luces dramáticas para reforzar la sensación de tensión constante.  
 
 ---
 
 ## 🎯 Objetivos del Juego
 
-- **Sumergir** al jugador en un terror narrativo y psicológico, evitando los clichés de saltos repentinos (jump scares).  
-- **Contar** una historia de fe, desesperación y sacrificio mediante la interacción con el entorno.  
-- **Desafiar** al jugador a mantener la **calma** y la **curiosidad**, pues cada sonido puede ser la clave para sobrevivir… o el anuncio de su fin.  
+- **Sumergirte** en un terror psicológico donde la ambientación y el sonido crean el miedo, sin depender de sustos repentinos (jump scares).  
+- **Revelar** la historia de fe, desesperación y sacrificio a medida que exploras y descifras pistas.  
+- **Desafiar** tus sentidos: cada crujido o susurro puede decidir tu supervivencia.  
 
 ---
 
 ## 🔑 Características Destacadas
 
-- **Entorno dinámico**: las habitaciones cambian sutilmente con el tiempo, haciendo que cada visita sea impredecible.  
-- **Puzles basados en objetos simbólicos**: resuelve acertijos imbuidos de simbolismo religioso para desbloquear áreas ocultas.  
-- **Sistema de audio espacial**: sonido 3D en VR que te permitirá identificar la posición del ente solo escuchando sus ecos.  
-- **Narrativa no lineal**: fragmentos de la historia que se van hilando a medida que exploras y descubres pistas.  
-- **Mecánica de sigilo por sonido**: tus pasos, alaridos y respiración pueden ser tu perdición si no actúas con cautela.  
-- **Optimización VR**: baja carga gráfica gracias al estilo low poly, con controles intuitivos para una experiencia inmersiva.  
+- **Audio 3D** en Cardboard: siente la cercanía de la entidad gracias a efectos direccionales.  
+- **Entorno Dinámico**: habitaciones que mutan, objetos que aparecen o desaparecen según tu progreso narrativo.  
+- **Puzles Simbólicos**: resuelve enigmas basados en elementos religiosos para avanzar (cruces, vitrales, reliquias).  
+- **Optimización Móvil**: gráficos low poly + calidad de audio ajustada para un Redmi funcionando a 60 FPS en VR.  
+- **Controles Intuitivos**: mueve tu cabeza para explorar y pulsa el “botón” del Cardboard para interactuar.  
 
 ---
 
-## 🎥 Cómo Jugar
+## 📱 Requisitos Técnicos (Android + Cardboard)
 
-1. **Configuración Inicial**  
-   - Conecta tu casco VR (Oculus Rift, HTC Vive, Valve Index, etc.) y asegúrate de tener espacio libre para desplazarte con seguridad.  
-   - Ajusta la configuración gráfica al estilo **low poly** para garantizar fluidez a 90 FPS (o la tasa propia de tu dispositivo).
+1. **Proyecto en Unity**:  
+   - Versión recomendada: **Unity 2021.3 LTS** (o superior).  
+   - Plataforma de compilación: **Android**.  
 
-2. **Controles Básicos**  
-   - **Movimiento**: Joysticks (teleportación o locomoción suave, según tu preferencia).  
-   - **Interacción**: Agarra objetos con los gatillos del controlador y examínalos moviendo tu cabeza y manos.  
-   - **Linterna / Objeto Especial**: Botón asignado para encender/apagar la linterna que revela símbolos ocultos en la oscuridad.
+2. **Paquetes y Plugins Necesarios**:  
+   - **Google Cardboard XR Plugin** (instálalo desde el Package Manager o desde el [repositorio oficial de Cardboard Unity](https://github.com/googlevr/cardboard-xr-plugin)).  
+   - **XR Interaction Toolkit** (opcional si quieres controles más avanzados).  
+   - **Audio Spatializer Plugin** (por ejemplo, **Resonance Audio** para Android).  
 
-3. **Supervivencia y Sigilo**  
-   - **Observa**: presta atención a los sonidos ambientales—cada crujido, susurro o golpe puede anunciar la cercanía del ente.  
-   - **Muévete en silencio**: evita correr o golpear objetos metálicos; la criatura detecta incluso el roce más leve.  
-   - **Esquiva y Ocúltate**: si escuchas pasos o risas infantiles retorcidas, busca un escondite hasta que el peligro pase.
+3. **Software Requerido en tu PC**:  
+   - **Android SDK & NDK** (instalados via Unity Hub → Android Build Support).  
+   - **JDK x64** (OpenJDK incluido en Unity Hub suele ser suficiente).  
+   - **Unity Hub** para administrar versiones de Unity y módulos de Android.  
 
-4. **Progresión de la Historia**  
-   - Recoge **Fragmentos de Fe** (objetos clave que revelan un flashback) para ir reconstruyendo el pasado:  
-     - Cartas y diarios manchados de tinta roja.  
-     - Símbolos religiosos desgastados por el tiempo.  
-     - Grabaciones en grabadoras analógicas con susurros distorsionados.  
-   - Cada fragmento te acercará a comprender el pacto fatal y los motivos que llevaron al sacrificio.
+4. **Dispositivo de Prueba**:  
+   - **Celular Android (p. ej. Redmi)** con soporte de Google Cardboard (conector de audífonos o Bluetooth).  
+   - **Google Cardboard** o visor compatible (asegúrate de ajustar la plantilla de lentes para tu modelo de Redmi).  
 
 ---
 
-## 🛠️ Equipo de Desarrollo
+## 🔧 Cómo Compilar e Instalar en tu Celular
 
-| Nombre                         | Rol                                   |
-| ------------------------------ | ------------------------------------- |
-| **Maicol Steven Florez Rojas** | Programador                           |
-| **Brayan Steven León Martinez**| Programador y Ensamblador             |
-| **Jesus David Diaz Lobo**      | Diseñador de Sonido                   |
-| **David Esteban Diaz Arguello**| Diseñador de Niveles y Animador       |
+1. **Configurar Proyecto en Unity**  
+   - Abre el proyecto `LaMansionDeLosEcos` en Unity 2021.3 (o superior).  
+   - En **File → Build Settings**, selecciona **Android** y haz clic en **Switch Platform**.  
+   - Verifica que **Google Cardboard XR Plugin** y cualquier plugin de audio estén instalados (Window → Package Manager).  
 
-- **Maicol & Brayan**: Responsables de la implementación de mecánicas VR, lógica de sigilo por sonido, puzles y optimización low poly.  
-- **Jesus**: Diseñador del paisaje sonoro—grabaciones, efectos 3D, música inquietante y susurros que pondrán tus nervios a prueba.  
-- **David**: Creación y animación de entornos, habitaciones que cambian de forma, y modelado low poly de objetos religiosos y elementos clave.  
+2. **Ajustes Esenciales en Player Settings**  
+   - Ve a **Edit → Project Settings → Player → Other Settings**:  
+     - **Package Name**: `com.tuempresa.lamansiondelosecos`  
+     - **Minimum API Level**: Android 7.0 “Nougat” (API 24) o superior.  
+     - **Target Architecture**: "ARMv7" y "ARM64" para abarcar la mayoría de dispositivos.  
+     - **Graphics API**: Vulkan + OpenGLES3 (asegúrate de que tu Redmi lo soporte; si no, deja solo OpenGLES3).  
+   - En **XR Plug-in Management**, marca **Cardboard** para la pestaña Android.  
 
----
+3. **Configuración de Calidad y Rendimiento**  
+   - En **Edit → Project Settings → Quality**, crea un perfil “VR_Móvil” con la calidad de textura y sombras reducidas.  
+   - Ajusta **Anti-aliasing** a “Disabled” o “2x” para ganar rendimiento.  
+   - En la escena principal, revisa todos los materiales y modelos para asegurar que sean **low poly** y usen **texturas ligeras**.  
 
-## 📢 Enfoque en Sonido y Atmosfera
+4. **Build & Run en tu Redmi**  
+   - Conecta tu Redmi al PC por USB (activa “Depuración USB” en Opciones de Desarrollador).  
+   - En **Build Settings**, haz clic en **Build and Run**.  
+   - Selecciona una carpeta donde Unity genere el **APK**.  
+   - Una vez compilado, Unity instalará automáticamente el APK en tu Redmi.  
 
-- **Paisajes Sonoros Dinámicos**: Jesús David ha diseñado un sistema de audio reactivo:  
-  - Suaviza los diálogos en off (flashbacks) con reverb de catedral.  
-  - Genera ecos distorsionados cuando te acercas a objetos rituales.  
-  - Implementa el “Susurro del Eco”: un efecto que simula voces lejanas moviéndose a tu alrededor.  
-
-- **Audio Espacial en VR**: Gracias a middleware especializado (Wwise/Fmod), el sonido proviene de direcciones precisas. ¡La respiración del ente detrás de ti te pondrá la piel de gallina!  
-
----
-
-## 🚀 Estado del Proyecto y Próximos Pasos
-
-- ✅ **Prototipo inicial**: Habitaciones principales, sistema de recolección de objetos y primeros puzles funcionales.  
-- ✅ **Diseño sonoro base**: Grabaciones de ambientes y efectos de la entidad.  
-- 🚧 **Refinamiento de IA de sonido**: Mejorar la complejidad del comportamiento del niño poseído en función del ruido.  
-- 🚧 **Nivel final y bosses**: Escenario de la capilla oculta, enfrentamiento en el espejo del altar y final impactante.  
-- 📅 **Pruebas de Usuario**: Alpha cerrada en VR programada para el Q3/2025.  
-- 🏁 **Lanzamiento**: Meta Q4/2025 en plataformas de VR (SteamVR, Meta Store, SideQuest).
+5. **Probar con Google Cardboard**  
+   - Coloca tu Redmi en el visor Cardboard. Asegúrate de que el botón físico (o imán) de Cardboard funcione para detectar toques.  
+   - Enciende tu Cardboard, abre la app “La Mansión de los Ecos” recién instalada ¡y prepárate para el horror!  
 
 ---
 
-## 💡 Inspiración y Temática
+## 📲 Controles en Google Cardboard
 
-- **Fe vs. Desesperación**: Explora cómo la devoción puede volverse un arma de doble filo.  
-- **Ausencia de Jump Scares Tradicionales**: El horror se construye en silencio y tensión constante.  
-- **Diseño Religioso**: Vitrales rotos, altares cubiertos de polvo, manuscritos prohibidos y cálices oxidados.  
-- **Narrativa Ambiental**: Cada rincón de la mansión susurra fragmentos del pacto.  
+- 👀 **Mirar / Explorar**:  
+  - Gira tu cabeza para ver en 360° los pasillos, habitaciones y objetos.  
+- 🕹 **Interactuar / Seleccionar**:  
+  - Presiona el botón lateral (imán) o táctil de tu Cardboard para:  
+    1. Leer un objeto cercano (cartas, símbolos, grabaciones).  
+    2. Encender/apagar la linterna que revela símbolos ocultos en la oscuridad.  
+- 🤫 **Sigilo sonoro**:  
+  - Evita hacer movimientos bruscos; el niño poseído “escucha” tus pasos (cada movimiento de cabeza produce un ligero sonido).  
+  - Si deseas quedarte inmóvil, deja de girar la cabeza y silencia cualquier sonido externo (úsalo con audífonos).  
 
 ---
 
 ## 📂 Estructura del Repositorio
-
