@@ -138,12 +138,4 @@ Tú, un investigador escéptico obsesionado con desenmascarar lo paranormal, enc
 | **Jesus David Diaz Lobo**      | Diseñador de Sonido – Audio 3D, ambiente y susurros |
 | **David Esteban Diaz Arguello**| Diseñador de Niveles & Animador – Diseño low poly de entornos |
 
-- **Maicol & Brayan**:  
-  - Integración de Google Cardboard XR Plugin, mecánica de ocultamiento y puzles con objetos religiosos.  
-  - Optimización de escenas para un **Redmi** en VR a 60 FPS.  
-- **Jesus**:  
-  - Creación de paisajes sonoros 3D, implementación de audio espacial y diseño de efectos para la entidad.  
-- **David**:  
-  - Modelado low poly de habitaciones, símbolos religiosos, mobiliario y animaciones básicas de la criatura.  
-
 ---
